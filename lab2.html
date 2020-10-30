@@ -17,40 +17,47 @@
 
     <h3>Introduction</h3>
 
-    <p><a href="https://en.wikipedia.org/wiki/Git"> Git</a> is a distributed
-    version-control system for tracking changes in source code during software
-    development. This tool was created by Linus Torvalds and it can be used
-    jointly with other hosting services such as <a href="https://github.com">
-    GitHub</a>. Furthermore, command line procedures such as commit, push, pull
-    and so fourth are one of the main features of Git that allows for an easier
-    and flexible source code management and control.</p>
+    <p><a href="https://en.wikipedia.org/wiki/Git">Git</a> is a
+    distributed version-control system for tracking changes in source
+    code during software development. This tool was created by Linus
+    Torvalds and it can be used jointly with other hosting services
+    such as <a href="https://github.com">GitHub</a>. Furthermore,
+    command-line operations as commit, push, pull and so fourth are
+    one of the main features of Git that allows for an easier and
+    flexible source code management and control.</p>
 
-    <p>In this programming lab you are expected to extract some attributes for
-      each commit done in the <a href="https://github.com/Atom/atom"> Atom</a>
-      project, and save it in
-      a <a href="https://en.wikipedia.org/wiki/Comma-separated_values"> CSV</a>
-      file to better process this information.</p>
+    <p>In this programming lab you are expected to extract some
+    attributes for each commit done in the <a
+    href="https://github.com/Atom/atom">Atom</a> project, and save it
+    in a <a
+    href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a>
+    file to better process this information.</p>
 
-    <p>To extract the commits in the desired format, clone the github repository
-        and run the following command in a terminal inside the cloned git:</p>
+    <p>To extract the commits in the desired format, clone the Github
+    repository of the <a href="https://github.com/Atom/atom">Atom</a>
+    project and run the following command in a terminal inside the
+    cloned repository:</p>
 
     <code>git rev-list --all --pretty=raw --dense --no-abbrev >
       atomCommits.txt</code>
 
     <h3>Assignment (80%)</h3>
 
-    <p>Using the all the commits available in the Atom github repository write a
-        program that does the following:</p>
+    <p>Using all commits available in the Atom GitHub repository write
+    a program that does the following:</p>
     <ul>
-      <li><p>(70%) Read the created file <tt>atomCommits.txt</tt> and parse it,
-      then output the CSV file <tt>atomCommits.csv</tt> with the format:</p>
+      <li><p>(70%) Read the file <tt>atomCommits.txt</tt>, parse it,
+      and create a CSV file <tt>atomCommits.csv</tt> with the
+      format:</p>
 
-        <code>&lt;Author&gt;,&lt;Committer&gt;,&lt;Author Email&gt;,&lt;Commit
-        ID&gt;,&lt;Parent&gt;,&lt;GPG Signed?&gt;,&lt;Commit Message&gt;</code>
+        <code>&lt;Author&gt;,&lt;Committer&gt;,&lt;Author
+        Email&gt;,&lt;Commit ID&gt;,&lt;Parent&gt;,&lt;GPG
+        Signed?&gt;,&lt;Commit Message&gt;</code>
 
-      <p>If there is no information available for a given attribute the
-       corresponding field should be left blank. Furthermore, if the email is a
-       local address instead of an email account it should be also left in blank.</p>
+      <p>If there is no information available for a given attribute
+      the corresponding field should be left blank. Furthermore, if
+      the email is a local address instead of an email account it
+      should be also left in blank.</p>
 
        <p>You might find the libraries
         <a href="https://hackage.haskell.org/package/cassava">
@@ -59,7 +66,8 @@
           regex-tdfa</a> useful.</p>
 
       </li>
-      <li> (10%)
+
+      <li>(10%)
         <ul>
           <li>Your lab will be tested using the <code>-Wall</code>,
           <code>-Wmissing-signatures</code> and
@@ -71,7 +79,7 @@
 
           <li>Improve your implementation
           with <a href="https://hackage.haskell.org/package/hlint">HLint</a> ≥
-          3.1.</li>
+          3.2.1</li>
         </ul>
       </li>
 
